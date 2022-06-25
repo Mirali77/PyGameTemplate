@@ -19,6 +19,7 @@ pygame.mixer.init()  # для звука
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("My Game")
 clock = pygame.time.Clock()
+all_sprites = pygame.sprite.Group()
 
 # Рендеринг
 screen.fill(BLACK)
@@ -38,7 +39,8 @@ while running:
             running = False
 
     # Обновление
-
+    all_sprites.update()
+    
     # Визуализация (сборка)
 
 pygame.quit()
