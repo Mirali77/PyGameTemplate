@@ -20,6 +20,11 @@ screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("My Game")
 clock = pygame.time.Clock()
 
+# Рендеринг
+screen.fill(BLACK)
+# после отрисовки всего, переворачиваем экран
+pygame.display.flip()
+
 # Цикл игры
 running = True
 while running:
@@ -35,9 +40,5 @@ while running:
     # Обновление
 
     # Визуализация (сборка)
-    # Рендеринг
-    screen.fill(BLACK)
-    # после отрисовки всего, переворачиваем экран
-    pygame.display.flip()
 
 pygame.quit()
